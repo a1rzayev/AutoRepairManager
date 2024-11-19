@@ -61,7 +61,6 @@ const Cars = () => {
 
       <h1 className="text-3xl font-bold text-gray-700 mb-6">Manage Cars</h1>
 
-      {/* Search and Add Car */}
       <div className="flex items-center justify-between mb-6">
         <div className="relative w-1/2">
           <input
@@ -82,7 +81,6 @@ const Cars = () => {
         </button>
       </div>
 
-      {/* Cars Table */}
       {filteredCars.length > 0 ? (
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-lg shadow-md">
@@ -131,7 +129,6 @@ const Cars = () => {
         </div>
       )}
 
-      {/* Modal */}
       {isModalOpen && (
         <CarModal
           car={selectedCar}
@@ -143,7 +140,6 @@ const Cars = () => {
   );
 };
 
-// CarModal Component
 const CarModal = ({ car, onClose, onSave }) => {
   const [formData, setFormData] = useState({
     id: car?.id || null,

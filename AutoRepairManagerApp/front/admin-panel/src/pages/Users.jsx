@@ -68,7 +68,6 @@ const Users = () => {
 
       <h1 className="text-3xl font-bold text-gray-700 mb-6">Manage Users</h1>
 
-      {/* Search and Add User */}
       <div className="flex items-center justify-between mb-6">
         <div className="relative w-1/2">
           <input
@@ -89,7 +88,6 @@ const Users = () => {
         </button>
       </div>
 
-      {/* Users Table */}
       {filteredUsers.length > 0 ? (
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-lg shadow-md">
@@ -138,7 +136,6 @@ const Users = () => {
         </div>
       )}
 
-      {/* Modal */}
       {isModalOpen && (
         <UserModal
           user={selectedUser}
@@ -150,7 +147,6 @@ const Users = () => {
   );
 };
 
-// UserModal Component
 const UserModal = ({ user, onClose, onSave }) => {
   const [formData, setFormData] = useState({
     id: user?.id || null,
